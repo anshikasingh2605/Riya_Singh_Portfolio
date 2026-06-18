@@ -1,15 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap');
 
 :root {
-    --bg: #FCF7F2; /* Creamy light beige background */
-    --card: #FDFBF9; /* Soft clean warm white for cards */
+    --bg: #FCF7F2;
+    /* Creamy light beige background */
+    --card: #FDFBF9;
+    /* Soft clean warm white for cards */
     --white: #FFFFFF;
-    --accent: #8d3944f7; /* Classic Vino / Wine Red */
-    --accent-light: #8a2e3b; /* Soft Vino */
-    --text: #2E1E20; /* Deep burgundy-black */
-    --text-light: #7A6366; /* Muted Wine / Gray */
-    --border: #E8DFD5; /* Tan beige border */
-    --campaigns-bg: #F6EAEB; /* Light pastel rose-beige for campaign section */
+    --accent: #8d3944f7;
+    /* Classic Vino / Wine Red */
+    --accent-light: #8a2e3b;
+    /* Soft Vino */
+    --text: #2E1E20;
+    /* Deep burgundy-black */
+    --text-light: #7A6366;
+    /* Muted Wine / Gray */
+    --border: #E8DFD5;
+    /* Tan beige border */
+    --campaigns-bg: #F6EAEB;
+    /* Light pastel rose-beige for campaign section */
     --vino-glow: rgba(115, 47, 56, 0.666);
 }
 
@@ -366,6 +374,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -377,6 +386,7 @@ body {
         opacity: 0;
         transform: scale(0.95) translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: scale(1) translateY(0);
@@ -387,9 +397,11 @@ body {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-12px);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -429,11 +441,15 @@ body {
 
     .image-wrapper {
 
-        width: 320px;
+        width: 100%;
 
-        height: 420px;
+        max-width: 320px;
 
-        margin-top: 50px;
+        height: auto;
+
+        aspect-ratio: 3/4;
+
+        margin: 50px auto 0 auto;
 
     }
 
@@ -518,6 +534,7 @@ body {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }
@@ -747,7 +764,8 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 16px;
-    background: rgba(87, 34, 41, 0.05); /* Soft Vino glow in light theme */
+    background: rgba(87, 34, 41, 0.05);
+    /* Soft Vino glow in light theme */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -757,7 +775,8 @@ body {
 }
 
 body.dark-theme .exp-logo-wrapper {
-    background: rgba(212, 175, 55, 0.08); /* Soft Gold glow in dark theme */
+    background: rgba(212, 175, 55, 0.08);
+    /* Soft Gold glow in dark theme */
 }
 
 .exp-logo-wrapper img {
@@ -986,7 +1005,7 @@ body.dark-theme .exp-logo-wrapper {
 
 .service-card:hover {
     transform: translateY(-12px);
-    border-color:var(--accent-light);
+    border-color: var(--accent-light);
     background: var(--white);
     box-shadow: 0 25px 60px rgba(88, 17, 26, 0.15);
 }
@@ -1094,7 +1113,10 @@ body.dark-theme .exp-logo-wrapper {
 
 }
 
-.campaigns { padding: 120px 5%; background-color:#F0BFC3; }
+.campaigns {
+    padding: 120px 5%;
+    background-color: #F0BFC3;
+}
 
 .campaign-header {
 
@@ -1106,7 +1128,7 @@ body.dark-theme .exp-logo-wrapper {
 
 .campaign-header p {
 
-    color:brown;
+    color: brown;
 
     letter-spacing: 4px;
 
@@ -1222,7 +1244,8 @@ body.dark-theme .exp-logo-wrapper {
     font-size: 24px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    padding-left: 5px; /* offset the triangle play icon to center it visually */
+    padding-left: 5px;
+    /* offset the triangle play icon to center it visually */
 }
 
 .campaign-card:hover .play-overlay {
@@ -2814,6 +2837,7 @@ body.dark-theme .exp-logo-wrapper {
     }
 
 }
+
 /*==================================
         EXPERIENCE CARD IMAGES
 ===================================*/
@@ -2829,10 +2853,12 @@ body.dark-theme .exp-logo-wrapper {
     border: 1px solid var(--border);
     transition: all 0.3s ease;
 }
+
 .experience-card:hover .exp-image-container {
     background: rgba(88, 17, 26, 0.1);
     border-color: var(--accent);
 }
+
 .exp-card-image {
     width: 36px;
     height: 36px;
@@ -2850,23 +2876,27 @@ body.dark-theme .exp-logo-wrapper {
     transition: all 0.4s ease;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.03);
 }
+
 .proof-card:hover {
     transform: translateY(-8px);
     border-color: var(--accent);
     box-shadow: 0 20px 45px rgba(88, 17, 26, 0.12);
 }
+
 .proof-img-wrapper {
     width: 100%;
     border-radius: 16px;
     overflow: hidden;
     background: #fbfbfb;
 }
+
 .proof-img-wrapper img {
     width: 100%;
     height: auto;
     display: block;
     transition: transform 0.5s ease;
 }
+
 .proof-card:hover .proof-img-wrapper img {
     transform: scale(1.05);
 }
@@ -2879,11 +2909,13 @@ body.dark-theme .exp-logo-wrapper {
     width: 700px;
     margin: 0 auto;
 }
+
 .meme-track {
     display: flex;
     gap: 20px;
     transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
 .meme-card {
     flex: 0 0 calc(50% - 10px);
     min-width: calc(50% - 10px);
@@ -2895,6 +2927,7 @@ body.dark-theme .exp-logo-wrapper {
     cursor: pointer;
     box-shadow: 0 5px 20px rgba(0, 0, 0, .05);
 }
+
 .meme-card:hover {
     transform: translateY(-8px) scale(1.02);
     border-color: var(--accent);
@@ -2906,6 +2939,7 @@ body.dark-theme .exp-logo-wrapper {
         width: 100%;
         max-width: 350px;
     }
+
     .meme-card {
         flex: 0 0 100%;
         min-width: 100%;
@@ -2919,16 +2953,19 @@ body.dark-theme .exp-logo-wrapper {
     padding: 120px 5%;
     background: var(--bg);
 }
+
 .testimonial-container {
     max-width: 800px;
     margin: 0 auto;
 }
+
 .testimonial-slider-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
 }
+
 .testimonial-card {
     background: var(--card);
     border: 1.5px solid var(--border);
@@ -2939,14 +2976,17 @@ body.dark-theme .exp-logo-wrapper {
     position: relative;
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
+
 .testimonial-card.fade-out {
     opacity: 0;
     transform: translateY(10px);
 }
+
 .testimonial-card.fade-in {
     opacity: 1;
     transform: translateY(0);
 }
+
 .quote-icon {
     font-size: 40px;
     color: rgba(88, 17, 26, 0.08);
@@ -2954,6 +2994,7 @@ body.dark-theme .exp-logo-wrapper {
     top: 30px;
     left: 40px;
 }
+
 .stars {
     color: #D4AF37;
     font-size: 18px;
@@ -2961,6 +3002,7 @@ body.dark-theme .exp-logo-wrapper {
     display: flex;
     gap: 5px;
 }
+
 .testimonial-text {
     font-family: "Cormorant Garamond", serif;
     font-size: 26px;
@@ -2969,11 +3011,13 @@ body.dark-theme .exp-logo-wrapper {
     margin-bottom: 35px;
     font-style: italic;
 }
+
 .client-info {
     display: flex;
     align-items: center;
     gap: 20px;
 }
+
 .client-avatar {
     width: 60px;
     height: 60px;
@@ -2987,20 +3031,24 @@ body.dark-theme .exp-logo-wrapper {
     font-size: 18px;
     box-shadow: 0 5px 15px rgba(88, 17, 26, 0.2);
 }
+
 .client-details h4 {
     font-size: 20px;
     color: var(--text);
     margin-bottom: 4px;
 }
+
 .client-details span {
     font-size: 14px;
     color: var(--text-light);
 }
+
 .testimonial-controls {
     display: flex;
     align-items: center;
     gap: 30px;
 }
+
 .t-btn {
     width: 50px;
     height: 50px;
@@ -3016,16 +3064,19 @@ body.dark-theme .exp-logo-wrapper {
     justify-content: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
 }
+
 .t-btn:hover {
     background: var(--accent);
     color: var(--white);
     border-color: var(--accent);
     transform: scale(1.05);
 }
+
 .t-dots {
     display: flex;
     gap: 10px;
 }
+
 .t-dot {
     width: 10px;
     height: 10px;
@@ -3034,6 +3085,7 @@ body.dark-theme .exp-logo-wrapper {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 .t-dot.active {
     background: var(--accent);
     width: 25px;
@@ -3044,6 +3096,7 @@ body.dark-theme .exp-logo-wrapper {
     .testimonial-card {
         padding: 30px 20px;
     }
+
     .testimonial-text {
         font-size: 20px;
     }
@@ -3057,6 +3110,7 @@ body.dark-theme .exp-logo-wrapper {
     align-items: center;
     gap: 20px;
 }
+
 .theme-toggle-btn {
     width: 45px;
     height: 45px;
@@ -3070,8 +3124,9 @@ body.dark-theme .exp-logo-wrapper {
     justify-content: center;
     font-size: 18px;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
+
 .theme-toggle-btn:hover {
     transform: scale(1.08) rotate(15deg);
     border-color: var(--accent);
@@ -3087,25 +3142,31 @@ body.dark-theme .exp-logo-wrapper {
     color: var(--text) !important;
     transition: background 0.4s ease, color 0.4s ease;
 }
+
 .campaigns .campaign-header p {
     color: var(--accent) !important;
 }
+
 .campaigns .campaign-header h2 {
     color: var(--text) !important;
 }
+
 .campaigns .campaign-card {
     background: var(--card) !important;
     border: 1px solid var(--border) !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03) !important;
     transition: all 0.4s ease;
 }
+
 .campaigns .campaign-card:hover {
     border-color: var(--accent) !important;
     box-shadow: 0 20px 40px var(--vino-glow) !important;
 }
+
 .campaigns .campaign-info h3 {
     color: var(--text) !important;
 }
+
 .campaigns .campaign-info span {
     color: var(--text-light) !important;
 }
@@ -3114,16 +3175,25 @@ body.dark-theme .exp-logo-wrapper {
         DARK THEME OVERRIDES
 ===================================*/
 body.dark-theme {
-    --bg: #0A0A0C; /* Deep Obsidian Black */
-    --card: #161419; /* Rich Sleek Slate */
-    --card-hover: #222026; /* Slightly lighter slate */
+    --bg: #0A0A0C;
+    /* Deep Obsidian Black */
+    --card: #161419;
+    /* Rich Sleek Slate */
+    --card-hover: #222026;
+    /* Slightly lighter slate */
     --white: #111013;
-    --accent: #D4AF37; /* Metallic Luxury Gold */
-    --accent-light: #E5C490; /* Champagne Gold */
-    --text: #F5EFEB; /* Silk White */
-    --text-light: #9C958E; /* Muted Cashmere Gray */
-    --border: #232226; /* Sleek dark border */
-    --vino-glow: rgba(212, 175, 55, 0.15); /* Gold Glow */
+    --accent: #D4AF37;
+    /* Metallic Luxury Gold */
+    --accent-light: #E5C490;
+    /* Champagne Gold */
+    --text: #F5EFEB;
+    /* Silk White */
+    --text-light: #9C958E;
+    /* Muted Cashmere Gray */
+    --border: #232226;
+    /* Sleek dark border */
+    --vino-glow: rgba(212, 175, 55, 0.15);
+    /* Gold Glow */
     --campaigns-bg: #111013;
 }
 
@@ -3131,36 +3201,45 @@ body.dark-theme .navbar {
     background: rgba(12, 10, 10, 0.45);
     border-color: rgba(255, 255, 255, 0.08);
 }
+
 body.dark-theme .navbar.scrolled {
     background: rgba(12, 10, 10, 0.85);
     border-color: rgba(255, 255, 255, 0.15);
 }
+
 body.dark-theme .logo {
     color: var(--accent);
 }
+
 body.dark-theme .nav-links a {
     color: #F5EFEB;
 }
+
 body.dark-theme .nav-links a::after {
     background: var(--accent);
 }
+
 body.dark-theme .contact-btn {
     background: var(--accent);
     color: #0C0A0A;
 }
+
 body.dark-theme .contact-btn:hover {
     background: var(--accent-light);
     box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
 }
+
 body.dark-theme .logo-track img {
     filter: grayscale(1) invert(0.85) brightness(1.2);
     background: var(--card);
     border-color: var(--border);
 }
+
 body.dark-theme .logo-track img:hover {
     filter: none;
     border-color: var(--accent);
 }
+
 body.dark-theme .creative-card,
 body.dark-theme .shoot-card,
 body.dark-theme .meme-card,
@@ -3173,6 +3252,7 @@ body.dark-theme .contact-right {
     background: var(--card);
     border-color: var(--border);
 }
+
 body.dark-theme .experience-card h3,
 body.dark-theme .service-card h3,
 body.dark-theme .testimonial-card h4,
@@ -3182,6 +3262,7 @@ body.dark-theme .social-card h4,
 body.dark-theme .proof-text h3 {
     color: var(--text) !important;
 }
+
 body.dark-theme .hero p,
 body.dark-theme .experience-card p,
 body.dark-theme .experience-card li,
@@ -3191,6 +3272,7 @@ body.dark-theme .social-card p,
 body.dark-theme .contact-heading span {
     color: var(--text-light) !important;
 }
+
 body.dark-theme .creative-card:hover,
 body.dark-theme .shoot-card:hover,
 body.dark-theme .meme-card:hover,
@@ -3201,43 +3283,53 @@ body.dark-theme .testimonial-card:hover,
 body.dark-theme .social-card:hover {
     border-color: var(--accent);
 }
+
 body.dark-theme .experience-card:hover .exp-logo-wrapper {
     border-color: var(--accent) !important;
 }
+
 body.dark-theme .contact-right input,
 body.dark-theme .contact-right textarea {
     background: #120E0F;
     border-color: var(--border);
     color: var(--text);
 }
+
 body.dark-theme .contact-right input:focus,
 body.dark-theme .contact-right textarea:focus {
     border-color: var(--accent);
     background: var(--card);
 }
+
 body.dark-theme .contact-right button {
     background: var(--accent);
     color: #0C0A0A;
 }
+
 body.dark-theme .contact-right button:hover {
     background: var(--accent-light);
 }
+
 body.dark-theme .t-btn {
     background: var(--card);
     border-color: var(--border);
     color: var(--text);
 }
+
 body.dark-theme .t-btn:hover {
     background: var(--accent);
     color: #0C0A0A;
     border-color: var(--accent);
 }
+
 body.dark-theme .t-dot {
     background: var(--border);
 }
+
 body.dark-theme .t-dot.active {
     background: var(--accent);
 }
+
 body.dark-theme .client-avatar {
     background: var(--accent);
     color: #0C0A0A;
@@ -3270,39 +3362,48 @@ body.dark-theme .hero-buttons a:hover {
     color: #0C0A0A !important;
     border-color: var(--accent);
 }
+
 body.dark-theme .quote-icon {
     color: rgba(212, 175, 55, 0.08);
 }
+
 body.dark-theme .exp-year {
     border-color: var(--border);
     color: var(--text-light);
 }
+
 body.dark-theme .experience-card:hover .exp-year {
     border-color: var(--accent);
     color: var(--accent);
 }
+
 body.dark-theme .exp-tools span {
     background: #120E0F;
     border-color: var(--border);
     color: var(--text-light);
 }
+
 body.dark-theme .exp-tools span:hover {
     border-color: var(--accent);
     color: var(--accent);
     background: var(--card);
 }
+
 body.dark-theme .image-wrapper {
     border-color: var(--border);
     box-shadow: 0 30px 60px rgba(212, 175, 55, 0.12);
 }
+
 /* Hover styles for campaign cards in light mode */
 body:not(.dark-theme) .campaigns .campaign-card:hover {
     background: var(--accent) !important;
     border-color: var(--accent) !important;
 }
+
 body:not(.dark-theme) .campaigns .campaign-card:hover h3 {
     color: var(--white) !important;
 }
+
 body:not(.dark-theme) .campaigns .campaign-card:hover span {
     color: rgba(255, 255, 255, 0.8) !important;
 }
@@ -3315,27 +3416,34 @@ body:not(.dark-theme) .experience-card:hover {
     background: var(--accent) !important;
     border-color: var(--accent) !important;
 }
+
 body:not(.dark-theme) .experience-card:hover h3 {
     color: var(--white) !important;
 }
+
 body:not(.dark-theme) .experience-card:hover .exp-company {
     color: rgba(255, 255, 255, 0.95) !important;
 }
+
 body:not(.dark-theme) .experience-card:hover li {
     color: rgba(255, 255, 255, 0.8) !important;
 }
+
 body:not(.dark-theme) .experience-card:hover li::before {
     color: var(--white) !important;
 }
+
 body:not(.dark-theme) .experience-card:hover .exp-year {
     color: var(--white) !important;
     border-color: rgba(255, 255, 255, 0.4) !important;
 }
+
 body:not(.dark-theme) .experience-card:hover .exp-tools span {
     background: rgba(255, 255, 255, 0.15) !important;
     color: var(--white) !important;
     border-color: rgba(255, 255, 255, 0.3) !important;
 }
+
 body:not(.dark-theme) .experience-card:hover .exp-logo-wrapper {
     background: rgba(255, 255, 255, 0.15) !important;
     border-color: rgba(255, 255, 255, 0.35) !important;
@@ -3346,12 +3454,15 @@ body:not(.dark-theme) .service-card:hover {
     border-color: var(--accent) !important;
     box-shadow: 0 25px 60px rgba(88, 17, 26, 0.25) !important;
 }
+
 body:not(.dark-theme) .service-card:hover h3 {
     color: var(--white) !important;
 }
+
 body:not(.dark-theme) .service-card:hover p {
     color: rgba(255, 255, 255, 0.8) !important;
 }
+
 body:not(.dark-theme) .service-card:hover a {
     color: var(--white) !important;
     border-color: rgba(255, 255, 255, 0.5) !important;
@@ -3361,12 +3472,15 @@ body:not(.dark-theme) .social-card:hover {
     background: var(--accent) !important;
     border-color: var(--accent) !important;
 }
+
 body:not(.dark-theme) .social-card:hover h4 {
     color: var(--white) !important;
 }
+
 body:not(.dark-theme) .social-card:hover p {
     color: rgba(255, 255, 255, 0.8) !important;
 }
+
 body:not(.dark-theme) .social-card:hover i {
     color: var(--white) !important;
 }
@@ -3379,9 +3493,11 @@ body:not(.dark-theme) .social-card:hover i {
         justify-content: center;
         gap: 40px;
     }
+
     #influencer-shoots .campaign-card {
         min-width: 320px;
     }
+
     #influencer-shoots .video-container {
         height: 550px;
     }
