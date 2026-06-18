@@ -483,4 +483,32 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // MOBILE NAV MENU TOGGLE
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    if (menuToggle && navLinks) {
+        const toggleIcon = menuToggle.querySelector("i");
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            if (toggleIcon) {
+                if (navLinks.classList.contains("active")) {
+                    toggleIcon.className = "fa-solid fa-xmark";
+                } else {
+                    toggleIcon.className = "fa-solid fa-bars";
+                }
+            }
+        });
+
+        // Close menu when a link is clicked
+        const links = navLinks.querySelectorAll("a");
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+                if (toggleIcon) {
+                    toggleIcon.className = "fa-solid fa-bars";
+                }
+            });
+        });
+    }
+
 });
