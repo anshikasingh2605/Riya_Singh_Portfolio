@@ -3181,20 +3181,28 @@ body.dark-theme {
     /* Rich Sleek Slate */
     --card-hover: #222026;
     /* Slightly lighter slate */
-    --white: #111013;
+    --white: #e7e4ee;
     --accent: #D4AF37;
     /* Metallic Luxury Gold */
     --accent-light: #E5C490;
     /* Champagne Gold */
     --text: #F5EFEB;
     /* Silk White */
-    --text-light: #9C958E;
+    --text-light: #fffbf8;
     /* Muted Cashmere Gray */
     --border: #232226;
     /* Sleek dark border */
     --vino-glow: rgba(212, 175, 55, 0.15);
     /* Gold Glow */
     --campaigns-bg: #111013;
+}
+
+body.dark-theme .section-heading h2,
+body.dark-theme .section-title h2,
+body.dark-theme .services-title h2,
+body.dark-theme .campaign-header h2,
+body.dark-theme .contact-heading h2 {
+    color: #ffffff !important;
 }
 
 body.dark-theme .navbar {
@@ -3260,7 +3268,7 @@ body.dark-theme .testimonial-text,
 body.dark-theme .contact-right h4,
 body.dark-theme .social-card h4,
 body.dark-theme .proof-text h3 {
-    color: var(--text) !important;
+    color: var(--text);
 }
 
 body.dark-theme .hero p,
@@ -3270,7 +3278,7 @@ body.dark-theme .service-card p,
 body.dark-theme .proof-text p,
 body.dark-theme .social-card p,
 body.dark-theme .contact-heading span {
-    color: var(--text-light) !important;
+    color: var(--text-light) ;
 }
 
 body.dark-theme .creative-card:hover,
