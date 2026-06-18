@@ -83,44 +83,49 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }
-    const campaignCards =
-        document.querySelectorAll(
-            ".campaign-card"
-        );
-
-    const campaignModal =
-        document.getElementById(
-            "videoModal"
-        );
-
-    const campaignPopup =
-        document.getElementById(
-            "popupVideo"
-        );
-
-    const campaignClose =
-        document.getElementById(
-            "closeVideo"
-        );
-
-    if (campaignCards.length && campaignModal && campaignPopup && campaignClose) {
-        campaignCards.forEach(card => {
-            card.onclick = () => {
-                const sourceEl = card.querySelector("source");
-                if (sourceEl) {
-                    campaignPopup.src = sourceEl.src;
-                    campaignModal.style.display = "flex";
-                    campaignPopup.play();
-                }
-            };
+    // CAMPAIGN VIDEOS INLINE PLAY/PAUSE
+    const campaignVideos = document.querySelectorAll(".campaign-card video");
+    campaignVideos.forEach(video => {
+        const card = video.closest(".campaign-card");
+        const overlay = card.querySelector(".play-overlay");
+        
+        card.addEventListener("click", (e) => {
+            if (e.target === video && video.controls) return;
+            
+            if (video.paused) {
+                // Pause all other campaign videos
+                campaignVideos.forEach(otherVideo => {
+                    if (otherVideo !== video && !otherVideo.paused) {
+                        otherVideo.pause();
+                        const otherCard = otherVideo.closest(".campaign-card");
+                        const otherOverlay = otherCard.querySelector(".play-overlay");
+                        if (otherOverlay) otherOverlay.style.display = "flex";
+                        otherVideo.controls = false;
+                    }
+                });
+                
+                // Pause all event videos
+                const allEventVideos = document.querySelectorAll(".shoot-grid .shoot-card video");
+                allEventVideos.forEach(otherVideo => {
+                    if (!otherVideo.paused) {
+                        otherVideo.pause();
+                        const otherCard = otherVideo.closest(".shoot-card");
+                        const otherOverlay = otherCard.querySelector(".play-overlay");
+                        if (otherOverlay) otherOverlay.style.display = "flex";
+                        otherVideo.controls = false;
+                    }
+                });
+                
+                video.play();
+                if (overlay) overlay.style.display = "none";
+                video.controls = true;
+            } else {
+                video.pause();
+                if (overlay) overlay.style.display = "flex";
+                video.controls = false;
+            }
         });
-
-        campaignClose.onclick = () => {
-            campaignModal.style.display =
-                "none";
-            campaignPopup.pause();
-        };
-    }
+    });
     document
         .querySelectorAll(".creative-card img")
         .forEach(img => {
@@ -151,6 +156,18 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (otherVideo !== video && !otherVideo.paused) {
                         otherVideo.pause();
                         const otherCard = otherVideo.closest(".shoot-card");
+                        const otherOverlay = otherCard.querySelector(".play-overlay");
+                        if (otherOverlay) otherOverlay.style.display = "flex";
+                        otherVideo.controls = false;
+                    }
+                });
+                
+                // Pause campaign videos
+                const allCampaignVideos = document.querySelectorAll(".campaign-card video");
+                allCampaignVideos.forEach(otherVideo => {
+                    if (!otherVideo.paused) {
+                        otherVideo.pause();
+                        const otherCard = otherVideo.closest(".campaign-card");
                         const otherOverlay = otherCard.querySelector(".play-overlay");
                         if (otherOverlay) otherOverlay.style.display = "flex";
                         otherVideo.controls = false;
