@@ -407,7 +407,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 1. Go to https://web3forms.com  →  Enter singhriya132003@gmail.com
     // 2. Check your inbox and copy the Access Key they send you
     // 3. Paste it below (replace YOUR_ACCESS_KEY)
-    const WEB3FORMS_ACCESS_KEY = "44fe9a82-0f9f-4c2e-b833-e23c54d7f80c";
+    const WEB3FORMS_ACCESS_KEY = "c1171ed6-a9d6-4f47-920e-ea30b6b00688";
 
     const contactForm = document.getElementById("contact-form");
     if (contactForm) {
